@@ -1,6 +1,6 @@
 {{meta {load_files: ["code/intro.js"]}}}
 
-# Introduction
+# مقدمه
 
 {{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
 
