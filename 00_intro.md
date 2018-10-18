@@ -10,51 +10,39 @@ quote}}
 
 {{figure {url: "img/chapter_picture_00.jpg", alt: "Picture of a screwdriver and a circuit board", chapter: "framed"}}}
 
-This is a book about instructing ((computer))s. Computers are about as
-common as screwdrivers today, but they are quite a bit more complex,
-and making them do what you want them to do isn't always easy.
+این کتاب درمورد تعلیم دادن کامپیوتر‌ها است. امروزه کامپیوتر‌ها به اندازه‌ی پیچ‌گوشتی‌ها متداول شده‌اند، اما بسیار پیچیده‌تر از
+پیچ‌گوشتی‌ها هستند و این که تعلیمشان دهیم تا کاری که ما می‌خواهیم را انجام دهند، همیشه آسان نیست.
 
-If the task you have for your computer is a common, well-understood
-one, such as showing you your email or acting like a calculator, you
-can open the appropriate ((application)) and get to work. But for
-unique or open-ended tasks, there probably is no application.
+اگر وظیفه‌ای که برای کامپیوتر خود تعریف می‌کنید، یک کار معمول و کاملا قابل درک باشد، مثل نمایش دادن ایمیل‌هایتان و یا عمل کردن
+شبیه به یک ماشین حساب، آنوقت می‌توانید برنامه‌ی مناسب را باز کنید و کارتان را شروع کنید. اما برای یک تکلیف منحصر به فرد و یا غیر قابل
+تعریف و بی‌انتها، به احتمال زیاد برنامه‌ای وجود ندارد.
 
-That is where ((programming)) may come in. _Programming_ is the act of
-constructing a _program_—a set of precise instructions telling a
-computer what to do. Because computers are dumb, pedantic beasts,
-programming is fundamentally tedious and frustrating.
+اینجاست که پای برنامه‌نویسی به وسط می‌آید. برنامه‌نویسی کار  ِ ساخت _برنامه‌هاست_. برنامه شامل دستورات دقیقی است که به کامپیوتر
+می‌گوید چه کاری انجام دهد. از آنجا که کامپیوتر‌ها بسیار احمق و البته دقیق هستند و ایرادات ملانقطه‌ای می‌گیرند، برنامه‌نویسی
+به طور ذاتی کاری طاقت‌فرساست.
 
 {{index [programming, "joy of"], speed}}
 
-Fortunately, if you can get over that fact, and maybe even enjoy the rigor
-of thinking in terms that dumb machines can deal with, programming can
-be rewarding. It allows you to do things in seconds that would take
-_forever_ by hand. It is a way to make your computer tool
-do things that it couldn't do before. And it provides a wonderful
-exercise in abstract thinking.
+خوش‌بختانه، اگر بتوانید با سختی  ِ فکر کردن به مسائل به گونه‌ای که کامپیوتر‌های احمق برایشان قابل درک است، کنار بیایید،
+برنامه‌نویسی می‌تواند برایتان فوق‌العاده لذت‌بخش باشد. این امکان را به شما می‌دهد تا کارهای طولانی و طاقت‌فرسا را در کثری از ثانیه
+انجام دهید. این امکان را به شما می‌دهد تا کامپیوترتان را تعلیم دهید تا کارهایی را بکند که قبلا نمی‌توانسته.
+و البته یک تمرین فوق‌العاده برای تفکر انتزاعی هم هست.
 
-Most programming is done with ((programming language))s. A _programming
-language_ is an artificially constructed language used to instruct
-computers. It is interesting that the most effective way we've found
-to communicate with a computer borrows so heavily from the way we
-communicate with each other. Like human languages, computer languages
-allow words and phrases to be combined in new ways, making it possible to
-express ever new concepts.
+بیشتر کار برنامه‌نویسی با زبان‌های برنامه‌نویسی انجام می‌شود. یک _زبان برنامه‌نویسی_، یک زبان ساختگی است که از آن برای دادن
+دستورات به کامپیوتر استفاده می‌شود. نکته‌ی بسیار جالب این است که، روشی که ما برای ارتباط با کامپیوترها یافته‌ایم
+بسیار شبیه به روشی است که خود ما برای ارتباط با یکدیگر استفاده می‌کنیم. مثل زبان‌های انسانی، زبان کامپیوتر این امکان
+را به ما می‌دهد که کلمات و عبارات را به گونه‌های جدید باهم ترکیب کنیم و بدین صورت مفاهیم جدیدی را با استفاده از آن‌ها بیان کنیم.
 
 {{index [JavaScript, "availability of"], "casual computing"}}
 
-At one point language-based interfaces, such as the BASIC and DOS
-prompts of the 1980s and 1990s, were the main method of interacting with
-computers. They have largely been replaced with visual interfaces,
-which are easier to learn but offer less freedom. Computer languages
-are still there, if you know where to look. One such language,
-JavaScript, is built into every modern web ((browser)) and is thus
-available on almost every device.
+زمانی بود که رابط‌های مبتنی بر زبان، مثل BASIC و DOS در دهه‌ی ۱۹۸۰ و ۱۹۹۰ میلادی، روش اصلی برای ارتباط با کامپیوتر‌ها
+بودند. اما امروزه آن‌ها به طور گسترده‌ای با رابط‌های دیداری جایگزین شده‌اند؛ یادگیری رابط‌های بصری راحت‌تر است اما آزادی عمل کمتری
+به ما می‌دهند. اگر بدانید کجا را بگردید، می‌فهمید که زبان‌های برنامه‌نویسی هنوز هم وجود دارند. یکی از این زبان‌ها
+جاوااسکریپت است، که درون تمام مرورگر‌های مدرن وب گنجانده شده و بنابراین می‌توان گفت که تقریبا روی هر دستگاهی موجود است.
 
 {{indexsee "web browser", browser}}
 
-This book will try to make you familiar enough with this language to
-do useful and amusing things with it.
+این کتاب تلاش دارد تا شما را به اندازه‌ی کافی با این زبان آشنا کند تا بتوانید با آن کار‌های مفید و سرگرم‌کننده بکنید.
 
 ## On programming
 

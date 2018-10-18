@@ -64,20 +64,20 @@ pre[data-language=javascript] {
 
 p:hover a.p_ident:after, pre:hover a.c_ident:after, h2:hover a.h_ident:after, h3:hover a.i_ident:after {
   content: "¶";
-  font-family: 'Cinzel', Georgia, serif;
+  font-family: 'Vazir', Georgia, serif;
   color: #888;
   font-size: 17px;
   position: absolute;
-  right: -10px;
+  left: -1px;
 }
 
 @media screen and (max-width: 800px) {
   p:hover a.p_ident:after, pre:hover a.c_ident:after, h2:hover a.h_ident:after, h3:hover a.i_ident:after {
-    right: 5px;
+    left: 5px;
   }
 
   blockquote p:hover a.p_ident:after {
-    right: -15px;
+    left: -5px;
   }
 }
 

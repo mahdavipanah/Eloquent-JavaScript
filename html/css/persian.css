@@ -61,12 +61,17 @@
 }
 /* End Vazir font loading */
 
+body {
+    font-size: 18px;
+}
+
 body,
 p:hover a.p_ident:after, pre:hover a.c_ident:after, h2:hover a.h_ident:after, h3:hover a.i_ident:after,
 h1, h2, h3,
 .sandbox-open-menu,
 .sandboxhint {
   font-family: 'Vazir';
+    line-height: 1.75;
 }
 
 h1, h2, h3,
@@ -95,8 +100,4 @@ blockquote:before {
 
 blockquote p:last-of-type:after {
     content: '»';
-}
-
-figure.chapter {
-    text-align: right;
 }
