@@ -31,3 +31,4 @@
 /book.epub
 /book.mobi
 .DS_STORE
+/package-lock.json
