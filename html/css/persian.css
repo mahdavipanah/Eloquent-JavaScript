@@ -77,3 +77,22 @@ p {
 nav {
   text-align: left;
 }
+
+blockquote footer {
+    direction: rtl;
+}
+
+blockquote footer:before {
+    right: -1em;
+    margin-top: 0.1em;
+}
+
+blockquote:before {
+    content: '»';
+    right: -.5em;
+    left: unset;
+}
+
+blockquote p:last-of-type:after {
+    content: '»';
+}
