@@ -96,3 +96,7 @@ blockquote:before {
 blockquote p:last-of-type:after {
     content: '»';
 }
+
+figure.chapter {
+    text-align: right;
+}
