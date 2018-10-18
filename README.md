@@ -1,16 +1,14 @@
-# Eloquent JavaScript
+<div dir="rtl">
 
-These are the sources used to build the third edition of Eloquent
-JavaScript (https://eloquentjavascript.net).
+# جاوااسکریپت خوش‌زبان
 
-Feedback welcome, in the form of issues and pull requests.
+اگر هرگونه پیشنهاد و یا بازخوردی دارید، در قالب issue و یا pull request مطرح کنید.
 
-## Building
+## نحوه‌ی گرفتن خروجی HTML
+<div dir="ltr">
 
     npm install
     make html
+</div>
 
-To build the PDF file:
-
-    apt-get install texlive texlive-xetex fonts-inconsolata fonts-symbola texlive-lang-chinese inkscape
-    make book.pdf
+</div>
