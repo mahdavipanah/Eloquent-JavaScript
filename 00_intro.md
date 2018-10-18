@@ -2,12 +2,9 @@
 
 # مقدمه
 
-{{quote {author: "Ellen Ullman", title: "Close to the Machine: Technophilia and its Discontents", chapter: true}
-
-We think we are creating the system for our own purposes. We believe
-we are making it in our own image... But the computer is not really
-like us. It is a projection of a very slim part of ourselves: that
-portion devoted to logic, order, rule, and clarity.
+{{quote {author: "اِلن اولمَن", title: "نزدیک به ماشین: تکنوفیلیا و ناخشنودی‌های آن", chapter: true}
+ما فکر می‌کنیم که سیستم را برای اهداف خودمان می‌سازیم. ما گمان می‌کنیم که آن را در تصور خود می‌سازیم... اما رایانه در واقع شبیه
+به ما نیست. رایانه تنها نمایی از بخش کوچکی از ماست: همان قسمتی که به منطقو نظم، قانون و شفافیت اختصاص دارد.
 
 quote}}
 
