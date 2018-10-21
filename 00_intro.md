@@ -24,8 +24,8 @@ quote}}
 {{index [programming, "joy of"], speed}}
 
 خوش‌بختانه، اگر بتوانید با سختی  ِ فکر کردن به مسائل به گونه‌ای که کامپیوتر‌های احمق برایشان قابل درک است، کنار بیایید،
-برنامه‌نویسی می‌تواند برایتان فوق‌العاده لذت‌بخش باشد. این امکان را به شما می‌دهد تا کارهای طولانی و طاقت‌فرسا را در کثری از ثانیه
-انجام دهید. این امکان را به شما می‌دهد تا کامپیوترتان را تعلیم دهید تا کارهایی را بکند که قبلا نمی‌توانسته.
+برنامه‌نویسی می‌تواند برایتان فوق‌العاده لذت‌بخش باشد. این امکان را به تو می‌دهد تا کارهای طولانی و طاقت‌فرسا را در کثری از ثانیه
+انجام دهید. این امکان را به تو می‌دهد تا کامپیوترتان را تعلیم دهید تا کارهایی را بکند که قبلا نمی‌توانسته.
 و البته یک تمرین فوق‌العاده برای تفکر انتزاعی هم هست.
 
 بیشتر کار برنامه‌نویسی با زبان‌های برنامه‌نویسی انجام می‌شود. یک _زبان برنامه‌نویسی_، یک زبان ساختگی است که از آن برای دادن
@@ -42,91 +42,71 @@ quote}}
 
 {{indexsee "web browser", browser}}
 
-این کتاب تلاش دارد تا شما را به اندازه‌ی کافی با این زبان آشنا کند تا بتوانید با آن کار‌های مفید و سرگرم‌کننده بکنید.
+این کتاب تلاش دارد تا تو را به اندازه‌ی کافی با این زبان آشنا کند تا بتوانید با آن کار‌های مفید و سرگرم‌کننده بکنید.
 
-## On programming
+## درمورد برنامه‌نویسی
 
 {{index [programming, "difficulty of"]}}
 
-Besides explaining JavaScript, I will introduce the basic
-principles of programming. Programming, it turns out, is hard. The
-fundamental rules are simple and clear, but programs built on top of
-these rules tend to become complex enough to introduce their own rules
-and complexity. You're building your own maze, in a way, and you might
-just get lost in it.
+در کنار توضیح جاوااسکریپت، قواعد ابتدایی برنامه‌نویسی را نیز معرفی خواهم کرد. برنامه‌نویسی کار سختی است. اصول پایه‌ای
+آن ساده و قابل فهم‌اند، ولی برنامه‌هایی که بر پایه‌ی این قوانین نوشته می‌شوند، پیچیده از آب در می‌آیند و قوانین و دشواری‌های
+خاص خود را درست می‌کنند. مثل این است که برای خودت هزارتویی بسازی، چون ممکن است خودت نیز در آن گم شوی.
 
 {{index learning}}
 
-There will be times when reading this book feels terribly frustrating.
-If you are new to programming, there will be a lot of new material to
-digest. Much of this material will then be _combined_ in ways that
-require you to make additional connections.
+در طی خواندن این کتاب ممکن است در جاهایی ناامید شوید. اگر با برنامه‌نویسی ناآشنا باشید، اطلاعات جدید زیادی را باید هضم
+کنید. بسیاری از این اطلاعات دوباره نیز  باهم _ترکیب_ می‌شوند که فهم آن‌ها نیازمند تمرکز دوچندان است.
 
-It is up to you to make the necessary effort. When you are struggling
-to follow the book, do not jump to any conclusions about your own
-capabilities. You are fine—you just need to keep at it. Take a break,
-reread some material, and make sure you read and understand the
-example programs and ((exercises)). Learning is hard work, but
-everything you learn is yours and will make subsequent learning
-easier.
+این به عهده‌ی تو است که به اندازه کافی تلاش کنی. وقتی برای دنبال کردن مفاهیم و فهم آن‌ها در حین خواندن کتاب در حال تقلا
+و تلاش هستی، این سختی را به دوش توان و استعداد خود نگذار. تو قطعا به اندازه‌ی کافی قابلیت یادگیری داری و تنها نیاز است که
+ادامه دهی. کمی استراحت کن، بعضی مطالب را دوباره بخوان و مطمئن شو که مثال برنامه‌ها و تمرین‌ها را می‌خوانی و کامل درک می‌کنی.
+یادگیری کار سختی است، اما هرچه که یاد می‌گیری اندوخته‌ای است برای خودت و یادگیری‌های آتی‌ات را آسان‌تر خواهد کرد.
 
-{{quote {author: "Ursula K. Le Guin", title: "The Left Hand of Darkness"}
+{{quote {author: "اورسولا کروبر لو گویین", title: "دست چپ تاریکی"}
 
 {{index "Le Guin, Ursula K."}}
 
-When action grows unprofitable, gather information; when information
-grows unprofitable, sleep.
+وقتی که انجام کار‌ها فایده‌ای ندارد، به جمع کردن اطلاعات بپرداز؛ وقتی اطلاعات هم سودی ندارد، بخواب.
 
 quote}}
 
 {{index [program, "nature of"], data}}
 
-A program is many things. It is a piece of text typed by a programmer,
-it is the directing force that makes the computer do what it does, it
-is data in the computer's memory, yet it controls the actions
-performed on this same memory. Analogies that try to compare programs
-to objects we are familiar with tend to fall short. A superficially
-fitting one is that of a machine—lots of separate parts tend to be
-involved, and to make the whole thing tick, we have to consider the
-ways in which these parts interconnect and contribute to the operation
-of the whole.
+یک برنامه‌ی کامپیوتری، خیلی چیزهاست. یک قطعه از متن است که توسط برنامه‌نویس نوشته‌شده‌است، نیروی هدایت‌کننده‌ای است که باعث
+می‌شود کامپیوتر کاری را که باید، بکند، اطلاعاتی است که داخل حافظه‌ی کامپیوتر است، و در عین حال اعمالی که روی همان حافظه
+انجام می‌شود را نیز کنترل می‌کند. به نظر می‌رسد مثال‌هایی که تلاش دارند تا برنامه‌های کامپیوتری را با اشیائی که ما با آن‌ها
+آشنا هستیم، مقایسه کنند، درک درست و دقیقی نمی‌دهند. یکی از همین قیاس‌ها که می‌تواند درکی کلی به ما بدهد،
+برنامه‌ی کامپیوتری را به یک ماشین تشبیه می‌کند، ماشینی که برای این که کار کند از اجزای مجزای زیادی تشکیل شده و برای فهم
+طرز کارکرد آن باید رابطه‌ی بین این اجزا و وظایفشان را در نظر بگیریم.
 
-A ((computer)) is a physical machine that acts as a host for these immaterial
-machines. Computers themselves can do only stupidly straightforward
-things. The reason they are so useful is that they do these things at
-an incredibly high ((speed)). A program can ingeniously combine an
-enormous number of these simple actions to do very
-complicated things.
+کامپیوتر، ماشینی فیزیک است که  به عنوان میزبانی برای این ماشین‌های غیرمادی (برنامه‌های کامپیوتری) عمل می‌کند.
+کامپیوتر‌ها خود به تنهایی قادرند کارهایی بسیار سرراست و احمقانه را انجام دهند. دلیلی که باعث می‌شود کامپیوترها تا این
+اندازه مفید باشند، این است که همین کارهای بسیار ساده را فوق‌العاده سریع انجام می‌دهند. یک برنامه‌ی کامپیوتری می‌تواند
+به طور هوشمندانه‌ای از ترکیب بی‌شماری از همین کارهای ساده تشکیل شده و انجام کارهایی بسیار پیچیده را ممکن کند.
 
 {{index [programming, "joy of"]}}
 
-A program is a building of thought. It is costless to build, it is
-weightless, and it grows easily under our typing hands.
+یک برنامه‌های کامپیوتری، سازه‌ای از تفکرات است. درست‌کردنش بدون‌هزینه‌است، وزنی ندارد و تنها با انگشتانی که قادر به تایپ
+هستند قابل ساخت است.
 
-But without care, a program's size and ((complexity)) will grow out of
-control, confusing even the person who created it. Keeping programs
-under control is the main problem of programming. When a program
-works, it is beautiful. The art of programming is the skill of
-controlling complexity. The great program is subdued—made simple in
-its complexity.
+اگر دقت کافی نشود، اندازه و پیچیدگی یک برنامه‌ی کامپیوتری می‌تواند از کنترل خارج شود و حتی شخصی که آن را نوشته را نیز
+دچار سردرگمی کند. مسئله‌ی اصلی در برنامه‌نویسی، تحت کنترل نگه داشتن برنامه‌های کامپیوتری است. وقتی یک برنامه کار می‌کند، بسیار
+زیباست. هنر برنامه‌نویسی، مهارت در کنترل کردن پیچیدگی است. یک برنامه‌ی عالی، برنامه‌ای مهار شده است - با تمام پیچیدگی‌ای
+که دارد، ساده نوشته‌شده‌است.
 
 {{index "programming style", "best practices"}}
 
-Some programmers believe that this complexity is best managed by using
-only a small set of well-understood techniques in their programs. They
-have composed strict rules ("best practices") prescribing the form
-programs should have and carefully stay within their safe little
-zone.
+بعضی از برنامه‌نویس‌ها گمان می‌کنند بهترین راه برای مدیریت این پیچیدگی، استفاده از مجموعه‌ی کوچکی از تکنیک‌های به خوبی درک
+شده در برنامه‌ها است. آن‌ها قواعد سرسختی را وضع‌کرده‌اند («تجربه‌ی برتر») که شکل و فرم برنامه‌ها را وضع می‌کند و برنامه‌ها را
+در یک محدوده‌ی امن و کوچک خودشان نگه می‌دارد.
 
 {{index experiment}}
 
-This is not only boring, it is ineffective. New problems often
-require new solutions. The field of programming is young and still
-developing rapidly, and it is varied enough to have room for wildly
-different approaches. There are many terrible mistakes to make in
-program design, and you should go ahead and make them so that you
-understand them. A sense of what a good program looks like is
-developed in practice, not learned from a list of rules.
+این کار نه تنها کسالت‌بار است، بلکه بی‌فایده هم هست. مسائل جدید اغلب نیازمند راه‌حل‌هایی جدید هستند. رشته‌ی برنامه‌نویسی هنوز
+جوان است و به سرعت در حال پیشرفت است و به اندازه‌ی کافی متنوع هست که جا برای مجموعه‌ی گسترده‌ای از رویکرد‌های گوناگون
+را داشته باشد. اشتباهات مهلک زیادی هست که در طراحی برنامه‌های کامپیوتری وجود دارد و بهترین راه برای درک درست و کامل آن‌ها،
+به جلو رفتن، مرتکب آن‌ها شدن و تجربه‌کردنشان است. حس تشخیص یک برنامه‌ی خوب از بد، نه از لیستی از قوانین، که با  تمرین و
+ممارست به وجود می‌آید.
 
 ## Why language matters
 
