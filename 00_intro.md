@@ -108,12 +108,13 @@ quote}}
 به جلو رفتن، مرتکب آن‌ها شدن و تجربه‌کردنشان است. حس تشخیص یک برنامه‌ی خوب از بد، نه از لیستی از قوانین، که با  تمرین و
 ممارست به وجود می‌آید.
 
-## Why language matters
+## چرا زبان مهم است؟
 
 {{index "programming language", "machine code", "binary data"}}
 
-In the beginning, at the birth of computing, there were no programming
-languages. Programs looked something like this:
+در ابتدا، و زمانی که کامپیوتر‌ها تازه خلق شده بودند، هیچ زبان برنامه‌نویسی‌ای وجود نداشت. برنامه‌ها چیزهایی شبیه به این
+بودند:
+
 
 ```{lang: null}
 00110001 00000000 00000000
@@ -129,43 +130,35 @@ languages. Programs looked something like this:
 
 {{index [programming, "history of"], "punch card", complexity}}
 
-That is a program to add the numbers from 1 to 10 together and print
-out the result: `1 + 2 + ... + 10 = 55`. It could run on a simple,
-hypothetical machine. To program early computers, it was necessary to
-set large arrays of switches in the right position or punch holes in
-strips of cardboard and feed them to the computer. You can probably
-imagine how tedious and error-prone this procedure was. Even writing
-simple programs required much cleverness and discipline. Complex ones
-were nearly inconceivable.
+برنامه‌ی بالا، برنامه‌ای است برای جمع کردن اعداد از ۱ تا ۱۰ و سپس چاپ نتیجه: `1 + 2 + ... + 10 = 55`.
+این برنامه می‌تواند توسط یک ماشین ابتدایی و فرضی اجرا شود. برای برنامه‌نویسی کردن کامپیوتر‌های اولیه، لازم بود تا
+تعداد زیادی سوئیچ در جای درست خود قرار بگیرند و یا سوراخ‌هایی درون کارت‌های پانج ایجاد کرده و کارت‌ها را وارد کامپیوتر
+کنند. احتمالا می‌توانی تصور کنی که این روش تا چه‌اندازه خسته‌کننده و مستعد خطا بوده‌است. حتی نوشتن یک برنامه‌ی ساده نیازمند
+نظم و هوشمندی زیادی بود. نوشتن برنامه‌های سخت که غیرقابل تصور است.
 
 {{index bit, "wizard (mighty)"}}
 
-Of course, manually entering these arcane patterns of bits (the ones
-and zeros) did give the programmer a profound sense of being a mighty
-wizard. And that has to be worth something in terms of job
-satisfaction.
+البته که، وارد کردن دستی الگوهای عجیب و غریب بیت‌ها (صفر‌ها و یک‌ها) به برنامه‌نویس حس یک جادوگر ماهر را میداد. احتمالا از
+نظر رضایت شغلی، این روش ارزشمند بوده.
 
 {{index memory, instruction}}
 
-Each line of the previous program contains a single instruction. It
-could be written in English like this:
+هر خط از برنامه‌ی قبل حاوی یک دستور است. به زبان فارسی می‌توان آن را این‌گونه نوشت:
 
- 1. Store the number 0 in memory location 0.
- 2. Store the number 1 in memory location 1.
- 3. Store the value of memory location 1 in memory location 2.
- 4. Subtract the number 11 from the value in memory location 2.
- 5. If the value in memory location 2 is the number 0,
-    continue with instruction 9.
- 6. Add the value of memory location 1 to memory location 0.
- 7. Add the number 1 to the value of memory location 1.
- 8. Continue with instruction 3.
- 9. Output the value of memory location 0.
+ ۱. عدد ۰ را داخل مکان ۰ حافظه قرار بده.  
+ ۲. عدد ۱ را داخل مکان ۱ حافظه قرار بده.  
+ ۳. مقدار مکان ۱ حافظه را داخل مکان ۲ حافظه ذخیره کن.  
+ ۴. عدد ۱۱ را از مقدار مکان ۲ حافظه کم کن.  
+ ۵. اگر مقدار حافظه در مکان ۲ برابر با ۰ است، ادامه کار را از دستور ۹ پیش برو.  
+ ۶. مقدار مکان ۱ حافظه را به مکان ۰ حافظه اضافه کن.  
+ ۷. عدد ۱ را به مقدار حافظه در مکان ۱ اضافه کن.  
+ ۸. ادامه کار را از دستور ۳ به پیش برو.  
+ ۹. مقدار حافظه در مکان ۰ را به خروجی بفرست.
 
 {{index readability, naming, binding}}
 
-Although that is already more readable than the soup of bits, it is
-still rather obscure. Using names instead of numbers for the
-instructions and memory locations helps.
+اگرچه این روش از آش شله قلمکار بیت‌ها در روش قبلی بهتر است، ولی بازهم مبهم است. استفاده از اسامی به جای اعداد در
+دستورات و مکان‌های حافظه، می‌تواند کمک‌کننده باشد.
 
 ```{lang: "text/plain"}
  Set “total” to 0.
@@ -183,21 +176,15 @@ instructions and memory locations helps.
 
 {{index loop, jump, "summing example"}}
 
-Can you see how the program works at this point? The first two lines
-give two memory locations their starting values: `total` will be used
-to build up the result of the computation, and `count` will keep track
-of the number that we are currently looking at. The lines using
-`compare` are probably the weirdest ones. The program wants to see
-whether `count` is equal to 11 to decide whether it can stop
-running. Because our hypothetical machine is rather primitive, it can
-only test whether a number is zero and make a decision based
-on that. So it uses the memory location labeled `compare` to compute
-the value of `count - 11` and makes a decision based on that value.
-The next two lines add the value of `count` to the result and
-increment `count` by 1 every time the program has decided that `count`
-is not 11 yet.
+آیا الان می‌توانی متوجه شوی برنامه چجوری کار می‌کند؟ دو خط اول، مقادیر اولیه‌ای برای دو مکان در حافظه قرار می‌دهند:
+`total` برای نگه‌داری نتیجه‌ی محسابه و `count` برای نگه‌داشتن عددی که در آن واحد با آن کار داریم استفاده خواهد شد.
+خطوطی که از `compare` استفاده می‌کنند احتمالا برای شما بیشتر از همه عجیب‌اند. برنامه می‌خواهد بداند آیا مقدار `count` برابر
+۱۱ هست یا نه و با توجه به آن، تصمیم بگیرد که اجرا را متوقف کند یا ادامه دهد. از آن‌جایی که ماشین ما نسبتا ابتدایی است،
+تنها قادر است بررسی کند که یک عدد برابر صفر است یا خیر و بر مبنای آن تصمیم‌گیری کند. پس بنابراین از مکانی
+از  حافظه که با نام `compare` می‌شناسیم استفاده می‌کند و مقدار `count - 11` را محاسبه و برمبنای نتیجه‌ی آن تصیم‌گیری می‌کند.
+دو خط بعدی، در صورتیکه `count` برابر ۱۱ نباشد، مقدار `count` را به نتیجه اضافه‌کرده و ‍`count` را به علاوه‌ی ‍۱ می‌کند.
 
-Here is the same program in JavaScript:
+در زیر همین برنامه را به زبان جاوااسکریپت مشاهده می‌کنید:
 
 ```
 let total = 0, count = 1;
@@ -211,27 +198,21 @@ console.log(total);
 
 {{index "while loop", loop, [braces, block]}}
 
-This version gives us a few more improvements. Most important, there
-is no need to specify the way we want the program to jump back and
-forth anymore. The `while` construct takes care of that. It continues
-executing the block (wrapped in braces) below it as long as the
-condition it was given holds. That condition is `count <= 10`, which
-means “_count_ is less than or equal to 10”. We no longer have to
-create a temporary value and compare that to zero, which was just an
-uninteresting detail. Part of the power of programming languages is
-that they can take care of uninteresting details for us.
+این نسخه از برنامه، بهبود‌هایی پیدا کرده‌است. مهم‌تر از همه، دیگر نیازی نیست تا به طور صریح، جاهایی که می‌خواهیم برنامه
+به عقب و جلو بپرد را مشخص کنیم. ساختار ‍`white` این کار را برایمان انجام می‌دهد. این ساختار، تا زمانی که شرط
+داده شده به آن، درست باشد و صدق کند، بدنه‌ی زیر خودش (که دور آن براکت است) را اجرا می‌کند. این شرط در اینجا `count <= 10` است،
+که به معنای این است که «`count` از عدد ۱۰ کوچکتر یا مساوی است». دیگر نیازی نیست تا مقداری موقتی ایجاد کنیم و آن را
+با صفر مقایسه کنیم و درگیر جزئیات بی‌فایده شویم. بخشی از قدرت زبان‌برنامه نویسی این است که ما را از درگیری با ریزه‌کاری‌های
+ناخوشایند دور نگه‌ می‌دارند.
 
 {{index "console.log"}}
 
-At the end of the program, after the `while` construct has finished,
-the `console.log` operation is used to write out the result.
+در آخر برنامه و بعد از این که ساختار `while` تمام می‌شود، از عبارت `console.log` برای چاپ نتیجه در خروجی استفاده می‌شود.
 
 {{index "sum function", "range function", abstraction, function}}
 
-Finally, here is what the program could look like if we happened to
-have the convenient operations `range` and `sum` available, which
-respectively create a ((collection)) of numbers within a range and
-compute the sum of a collection of numbers:
+در نهایت، اگر عبارت‌های بدردبخور `range` و `sum` را در اختیار داشته باشیم، که اولی مجموعه‌ای از اعداد را داخل یک بازه ایجاد کرده
+و دومی حاصل جمع مجموعه از اعداد را حساب می‌کند، برنامه به شکل زیر در می‌آید:
 
 ```{startCode: true}
 console.log(sum(range(1, 10)));
@@ -240,21 +221,16 @@ console.log(sum(range(1, 10)));
 
 {{index readability}}
 
-The moral of this story is that the same program can be expressed in
-both long and short, unreadable and readable ways. The first version of the
-program was extremely obscure, whereas this last one is almost
-English: `log` the `sum` of the `range` of numbers from 1 to 10. (We
-will see in [later chapters](data) how to define operations like `sum`
-and `range`.)
+نکته‌ی اخلاقی این داستان این است که یک برنامه‌ی واحد می‌تواند کوتاه یا بلند و خوانا و یا ناخوانا، نوشته شود. اولین
+نسخه‌ی برنامه‌ای که مثال زدیم، به دشت مبهم بود، درصورتیکه آخرین مثالمان از آن، تقریبا به زبان انگلیسی نوشته شده بود،
+چیزی شبیه به این: «مجموع (`sum`) اعداد داخل بازه‌ی ۱ تا ۱۰ (`range`) را چاپ کن (`log`).».
+(در [فصل‌های بعدی](data) باهم خواهیم دید تا چگونه عملکردی‌هایی مثل `sum` و `range` را تعریف کنیم.)
 
 {{index ["programming language", "power of"], composability}}
 
-A good programming language helps the programmer by allowing them to
-talk about the actions that the computer has to perform on a higher
-level. It helps omit details, provides convenient building blocks
-(such as `while` and `console.log`), allows you to define your own
-building blocks (such as `sum` and `range`), and makes those blocks
-easy to compose.
+یک زبان برنامه‌نویسی خوب، کمک می‌کند تا برنامه‌نویس اعمالی که کامپیوتر باید انجام دهد را، در سطوح بالا (نزدیک به زبان انسان)
+بیان کند. همچنین جزئیات را حذف می‌کند و ساختار‌هایی مفید مثل ‍`while`و `console.log` را فراهم کرده، اجازه‌ی تعریف ساختار‌های
+سازنده‌ی مخصوص خودمان را (مثل `sum` و `range`) به ما داده و ترکیب همه‌ی این ساختار‌ها را باهم، آسان می‌کند.
 
 ## What is JavaScript?
 
